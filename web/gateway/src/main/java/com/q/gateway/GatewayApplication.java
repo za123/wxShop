@@ -19,6 +19,7 @@ public class GatewayApplication {
 	@Bean
   @LoadBalanced
   public RestTemplate restTemplate(){
+    System.out.println("？？？？");
     return new RestTemplate();
   }
 }
