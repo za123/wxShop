@@ -2,7 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.q.goods.mapper.IGoodsMapper">
 
-  <select id="getUserLikeGoodsId" resultType="list">
-
+  <select id="getUserLikeGoodsId" resultType="string">
+    SELECT
+	    type_name NAME
+    FROM
+      goods_type gt
+    LEFT JOIN like_goods lg ON gt.id = lg.gt_id
+    WHERE
+      lg.c_id = #{userId}
   </select>
 </mapper>
