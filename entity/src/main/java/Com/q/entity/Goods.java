@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Goods {
 
-  private String id;
+  private Integer id;
 
   //商品类型 关联类型表
   private Integer goodsType;

@@ -13,5 +13,9 @@ public interface IGoodsMapper {
 
   List<String> getUserLikeGoodsId(@Param("userId") Integer userId);
 
-  List<Goods> getGoodsList();
+  List<Goods> getGoodsList(@Param("index") Integer index,@Param("end") Integer end);
+
+  long getTotal();
+
+  Integer consumerLikeGoodsType(@Param("gid") Integer gid,@Param("goodsType") Integer goodsType,@Param("userId") Integer userId);
 }

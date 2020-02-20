@@ -25,7 +25,20 @@
       `status`
     FROM
       goods
-      LIMIT 0,
-      10
+      LIMIT #{index},
+      #{end}
   </select>
+  <!--获取总数-->
+  <select id="getTotal" resultType="long">
+    SELECT
+      COUNT(id)
+    FROM
+      goods
+  </select>
+  <insert id="consumerLikeGoodsType" keyProperty="d">
+    INSERT INTO
+      like_goods ( c_id, g_id, gt_id )
+    VALUES
+      (#{userId},#{gid},#{goodsType})
+  </insert>
 </mapper>

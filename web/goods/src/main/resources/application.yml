@@ -11,6 +11,11 @@ spring:
     host: 39.79.252.115
     password: root
     database: 0
+  cloud:
+    nacos:
+      discovery:
+        register-enabled: true
+        server-addr: 127.0.0.1:8848
 elasticsearch:
   ip: localhost:9300
 server:

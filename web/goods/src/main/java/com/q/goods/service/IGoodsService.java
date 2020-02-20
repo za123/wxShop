@@ -10,5 +10,9 @@ public interface IGoodsService {
 
   List<Goods> getGoodsList(String userName);
 
-  List<Goods> getUserLikeGoods(Integer userId);
+  List<Goods> getUserLikeGoods(Integer index,Integer end,Integer userId);
+
+  long getTotal();
+
+  Integer consumerLikeGoodsType(Integer id, Integer goodsType, Integer userId);
 }
