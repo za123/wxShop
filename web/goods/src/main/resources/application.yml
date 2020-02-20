@@ -1,0 +1,17 @@
+#商品服务
+spring:
+  application:
+    name: goods-service
+  datasource:
+    username: root
+    password: 2941@root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.79.252.115:3306/wxShop
+  redis:
+    host: 39.79.252.115
+    password: root
+    database: 0
+elasticsearch:
+  ip: localhost:9300
+server:
+  port: 8082

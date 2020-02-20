@@ -1,0 +1,6 @@
+#消费者服务
+spring:
+  application:
+    name: wx-shop-consumer
+server:
+  port: 8081
