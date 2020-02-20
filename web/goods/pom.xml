@@ -61,7 +61,11 @@
 			<artifactId>elasticsearch</artifactId>
 			<version>6.3.2</version>
 		</dependency>
-
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper</artifactId>
+      <version>5.1.2</version>
+    </dependency>
 		<!-- Java High Level REST Client -->
 		<dependency>
 			<groupId>org.elasticsearch.client</groupId>

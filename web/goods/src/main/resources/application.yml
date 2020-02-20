@@ -1,4 +1,4 @@
-#商品服务
+
 spring:
   application:
     name: goods-service
@@ -6,7 +6,7 @@ spring:
     username: root
     password: 2941@root
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://39.79.252.115:3306/wxShop
+    url: jdbc:mysql://39.97.252.115:3306/wx_shop
   redis:
     host: 39.79.252.115
     password: root
@@ -15,3 +15,5 @@ elasticsearch:
   ip: localhost:9300
 server:
   port: 8082
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml

@@ -17,26 +17,22 @@ public class GoodsServiceImpl implements IGoodsService {
   @Autowired
   private IGoodsMapper goodsMapper;
 
-  /**
-   * 获取用户喜欢过的商品类型，从solr中提取5个同类型商品推荐
-   * @param userName
-   * @return
-   */
+
+
   @Override
   public List<Goods> getGoodsList(String userName) {
 
     return null;
   }
 
+  /**
+   * 获取用户喜欢过的商品类型，从solr中提取5个同类型商品推荐
+   * @param userId
+   * @return
+   */
   @Override
   public List<Goods> getUserLikeGoods(Integer userId) {
-    ArrayList<Goods> goodsList = new ArrayList<>();
-    List<String> userLikeGoodsTypeNames = goodsMapper.getUserLikeGoodsId(userId);
-    if (userLikeGoodsTypeNames.size() > 0) {
-      //根据种类 去索引库获取5个用户喜欢商品
-
-    }
-
-    return null;
+    List<Goods> goodsList = goodsMapper.getGoodsList();
+    return goodsList;
   }
 }

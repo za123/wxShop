@@ -34,7 +34,7 @@ public class Goods {
   private String images;
 
   //库存对象
-  private Stock stock;
+  private Integer stock;
 
   //创建时间时间
   private Integer createTime;

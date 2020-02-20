@@ -11,4 +11,21 @@
     WHERE
       lg.c_id = #{userId}
   </select>
+
+  <!--获取首页商品-->
+  <select id="getGoodsList" resultType="Com.q.entity.Goods">
+    SELECT
+      id,
+      g_type goodsType,
+      goods_name goodsName,
+      price,
+      `desc`,
+      evaluate_number evaluateNumber,
+      s_id stock,
+      `status`
+    FROM
+      goods
+      LIMIT 0,
+      10
+  </select>
 </mapper>
