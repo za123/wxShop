@@ -1,0 +1,13 @@
+
+spring:
+  application:
+    name: goods-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.97.225.151:3306/wx_shop
+    username: root
+    password: 2941@root
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
