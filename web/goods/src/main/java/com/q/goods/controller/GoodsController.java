@@ -69,6 +69,7 @@ public class GoodsController {
    */
   @PostMapping(value = "/consumerLikeGoodsType")
   public ResultEntity consumerLikeGoodsType(Goods goods, Integer userId) {
+    System.out.println("信息");
     Integer result = goodsService.consumerLikeGoodsType(goods.getId(), goods.getGoodsType(), userId);
     if (result > 0) {
       return ResultEntity.success("添加成功", null);

@@ -14,9 +14,10 @@
 	<name>consumer</name>
 	<description>Demo project for Spring Boot</description>
 
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
+  <properties>
+    <java.version>1.8</java.version>
+    <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
+  </properties>
 
 	<dependencies>
 		<dependency>
@@ -52,7 +53,24 @@
 			<artifactId>entity</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
+
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+    </dependency>
 	</dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>${spring-cloud-alibaba.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
 	<build>
 		<plugins>

@@ -19,5 +19,9 @@ spring:
           uri: lb://goods-service
           predicates:
           - Path=/goods/**
+        - id: consumer
+          uri: lb://consumer-service
+          predicates:
+          - Path=/consumer/**
 server:
   port: 8849

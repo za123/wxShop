@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Create by Administrator on 2020/2/18 0018
  */
 @RestController
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/consumer")
 public class UserController {
 
   //TODO 登录方法 - 获取购买记录 - 购物车
